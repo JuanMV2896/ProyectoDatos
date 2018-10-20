@@ -1,0 +1,12 @@
+es un Ave
+es un AguilaS
+es un ReptilN
+es un LagartoNS
+es un MamiferoNN
+es AcuaticoNNS
+es una BallenaNNSS
+es un GatoNNN
+es una ArannaNNNN
+es un AnfibioNNNNN
+es una ranaNNNNNS
+es una culebraNNNNNN
