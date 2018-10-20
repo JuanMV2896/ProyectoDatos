@@ -11,12 +11,13 @@ int Interface::winPrincipal(){
 		std::cout << "====================================================" << std::endl;
 		std::cout << "====================================================" << std::endl;
 		std::cout << "  1) Iniciar Partida								  " << std::endl;
-		std::cout << "  2) Salir									      " << std::endl;
+		std::cout << "  2) Modificar Niveles								  " << std::endl;
+		std::cout << "  3) Salir									      " << std::endl;
 		std::cout << "====================================================" << std::endl;
 		std::cout << " Digite una opcion: "; std::cin >> opcion;
 		std::cout << "====================================================" << std::endl;
 		op = validaOpcion(opcion);
-	} while (op != 2);
+	} while (op != 3);
 	return op;
 }
 
@@ -70,9 +71,26 @@ void Interface::startGame(Tree* game){
 	std::cout << "				EL MUNDO DE LOS ANIMALES			  " << std::endl;
 	std::cout << "====================================================" << std::endl;
 	if (game->ask(game->getRoot())) {
+		winWinner();
+		winNewData();
+	}
+	else {
 		winLose();
 	}
-	else
-		winWinner();
 	//validar que no tenga ningun numero...
+}
+
+void Interface::endGame(){
+	system("cls");
+	std::cout << "====================================================" << std::endl;
+	std::cout << "				   GRACIAS POR JUGAR			      " << std::endl;
+	std::cout << "====================================================" << std::endl;
+	Sleep(1000);
+	std::cout << "   CREADORES: Rodrigo Melendez Sibaja               " << std::endl;
+	Sleep(1000);
+	std::cout << "              Heison Navarro Castillo               " << std::endl;
+	Sleep(1000);
+	std::cout << "              Juan Carlos Madrigal Vasquez          " << std::endl;
+	Sleep(1000);
+	std::cout << "====================================================" << std::endl;
 }

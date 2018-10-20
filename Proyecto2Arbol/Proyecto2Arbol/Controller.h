@@ -6,7 +6,7 @@ class Controller {
 private:
 	Tree* game;
 public:
-	Controller(Tree*);
+	Controller();
 	~Controller();
 	int control1();
 	void control2();

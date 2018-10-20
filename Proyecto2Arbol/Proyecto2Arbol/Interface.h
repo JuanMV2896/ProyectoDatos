@@ -10,4 +10,5 @@ public:
 	static void winNewData();
 	static void winWinner();
 	static void startGame(Tree* game);
+	static void endGame();
 };
