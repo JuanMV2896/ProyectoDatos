@@ -13,7 +13,8 @@ int validaOpcion(std::string opcion){
 
 std::string direccion(std::string& valor) {
 	std::string direccion = "";
-	for (int i = 0; i < valor.size(); i++) {
+	int tamano = valor.size();
+	for (int i = 0; i < tamano; i++) {
 		if (valor[i] == 'S' || valor[i] == 'N') {
 			direccion += valor[i];
 			valor.erase(i, 1);
