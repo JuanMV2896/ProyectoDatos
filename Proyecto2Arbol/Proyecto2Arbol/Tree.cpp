@@ -156,17 +156,15 @@ bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 	return false;
 }
 
-NodePtr Tree::searchNodo(std::string name) {
+NodePtr Tree::searchNodo(std::string name) {  // Busca y delvuelve el nodo anterior al que se desea cambiar
 	NodePtr aux = root;
-
-
-	if (!aux) {
+	if (!aux) {  // si esta vacia
 		return nullptr;
 	}
-	if (aux->data == name) {  // si el nodo que desea cambiar esta en la raiz del arbol
+	if (aux->data == name) {  // si el nodo que desea cambiar es la raiz del arbol
 		return aux;
 	}
-	while (!aux->left)
+	while (!aux->left)  // Va buscando en los nodos siguientes y cuando lo encuentra devuelve el anterior
 	{
 		if (aux->left->data == name) {
 			return aux;
