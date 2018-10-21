@@ -164,7 +164,7 @@ NodePtr Tree::searchNodo(std::string name) {  // Busca y delvuelve el nodo anter
 	if (aux->data == name) {  // si el nodo que desea cambiar es la raiz del arbol
 		return aux;
 	}
-	while (!aux->left)  // Va buscando en los nodos siguientes y cuando lo encuentra devuelve el anterior
+	while (aux->left!=nullptr)  // Va buscando en los nodos siguientes y cuando lo encuentra devuelve el anterior
 	{
 		if (aux->left->data == name) {
 			return aux;
