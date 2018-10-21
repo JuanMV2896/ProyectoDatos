@@ -27,8 +27,8 @@ std::string direccion(std::string& valor) {
 
 void modificaNombre(std::string& nombre){
 	if (nombre[nombre.size()] != 'a') {
-		nombre = " es un " + nombre;
+		nombre = "es un " + nombre;
 	}
 	else
-		nombre = " es una " + nombre;
+		nombre = "es una " + nombre;
 }
