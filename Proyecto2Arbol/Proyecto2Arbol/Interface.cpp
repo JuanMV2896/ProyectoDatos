@@ -46,7 +46,9 @@ void Interface::winNewData(){
 		std::cout << " Fuerte caracteristica: "; std::cin >> caracteristica;
 		std::cout << "====================================================" << std::endl;
 		std::cout << "Esta seguro de los datos que ingreso? (si/no) : "; std::cin >> opcion;
-		
+		if (opcion == "si") {
+
+		}
 	} while (opcion != "si");
 }
 
@@ -57,7 +59,7 @@ void Interface::winWinner(){
 	std::cout << "*            EN HORABUENA, HAS GANADO...!            *" << std::endl;
 	std::cout << "*====================================================*" << std::endl;
 	std::cout << "******************************************************" << std::endl << std::endl;
-	std::cout << " Cargando" << std::endl;
+	std::cout << " Cargando";
 	for (int i = 0; i < 4; i++) {
 		std::cout << ".";
 		Sleep(1000);

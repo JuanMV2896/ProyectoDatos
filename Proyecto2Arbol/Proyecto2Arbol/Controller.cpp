@@ -12,7 +12,6 @@ Controller::Controller(){
 	catch (...) {
 		handle.close();
 	}
-
 }
 
 Controller::~Controller(){
