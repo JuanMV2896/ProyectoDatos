@@ -133,14 +133,14 @@ bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 	}
 	modificaNombre(changeClass1);
 	modificaNombre(changeClass2);
-	NodePtr nodoA=nullptr;
-	NodePtr nodoB=nullptr;
+	NodePtr nodoA = nullptr;
+	NodePtr nodoB = nullptr;
 	NodePtr auxA = nullptr;  
 	NodePtr auxB = nullptr;
-	NodePtr auxRoot = nullptr;
+	//NodePtr auxRoot = nullptr;
 	nodoA = searchNodo(changeClass1); // anterior del nodo a cambiar A
 	nodoB = searchNodo(changeClass2);//  anterior del nodo a cambiar B
-	if (nodoA != nullptr &&nodoB != nullptr) {  // Si son diferentes de null
+	if (nodoA != nullptr && nodoB != nullptr) {  // Si son diferentes de null
 		// hay que validar cuando se le ingresa los datos que no sean los mismos
 			// estos son los nodos que realmente se quieren mover
 			auxA = nodoA->left; 
