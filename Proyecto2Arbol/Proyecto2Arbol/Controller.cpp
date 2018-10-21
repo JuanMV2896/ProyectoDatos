@@ -6,7 +6,6 @@ Controller::Controller(){
 	try {
 		handle.open("../MundoAnimal.txt", std::ios::in);
 		game->setRoot(game->recover(handle));
-		game->toString(game->getRoot());
 		handle.close();
 		control2();
 	}
