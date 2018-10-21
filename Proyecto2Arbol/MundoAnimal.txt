@@ -6,8 +6,8 @@ es un MamiferoNN
 es AcuaticoNNS
 es una BallenaNNSS
 MaullaNNSN
-es un PerroNNSNN
 es un GatoNNSNS
+es un PerroNNSNN
 es un PezNNN
 es un Pez BetaNNNS
 es un animal InvertebradoNNNN

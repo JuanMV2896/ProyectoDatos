@@ -1,5 +1,5 @@
 #include"Controller.h"
-#include <iostream>
+//#include <iostream>
 int main() {
 	Controller controller;
 	system("pause");
