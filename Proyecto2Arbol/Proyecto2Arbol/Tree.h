@@ -24,6 +24,11 @@ public:
 	void save(NodePtr, std::ostream&);
 	NodePtr recover(std::ifstream&);
 	void toString(NodePtr);  //PRUEBA    -> Recorrido  PreOrden
+
+	bool changeLevel(std::string,std::string);
+	NodePtr searchNodo(std::string);
+	
+
 	bool insertaInformacion(std::string, std::string);
 	NodePtr newAdress();
 private:
