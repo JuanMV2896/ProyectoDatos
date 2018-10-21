@@ -3,7 +3,6 @@
 #include"Tree.h"
 #include<iostream>
 
-
 /// La clase interfaz es la encargada de todos los procesos de visualizacion del juego, para que haya facil comprension por parte de los usuarios
 /// con respecto a las funcionalidades que este programa brinda.
 class Interface {
