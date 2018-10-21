@@ -13,6 +13,7 @@ struct Node {
 };
 static std::string saveData = "";
 static std::string path = "";
+
 class Tree {	
 public:
 	Tree();
@@ -24,15 +25,11 @@ public:
 	void save(NodePtr, std::ostream&);
 	NodePtr recover(std::ifstream&);
 	void toString(NodePtr);  //PRUEBA    -> Recorrido  PreOrden
-
 	bool changeLevel(std::string,std::string);
 	NodePtr searchNodo(std::string);
-	
-
-	bool insertaInformacion(std::string, std::string);
+	bool insertInformation(std::string, std::string);
 	NodePtr newAdress();
 private:
 	NodePtr root;
-
 };
 #endif

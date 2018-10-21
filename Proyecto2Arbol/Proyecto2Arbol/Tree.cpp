@@ -103,16 +103,25 @@ void Tree::toString(NodePtr actual) { //Prueba   -> Recorrido  PreOrden
 	}
 }
 
-bool Tree::insertaInformacion(std::string nombre, std::string caracteristica){
+bool Tree::insertInformation(std::string nombre, std::string caracteristica){
 	NodePtr comodin = newAdress();
 	try {
 		NodePtr nuevo = new Node;
 		NodePtr hijo = new Node;
-		nuevo->right = hijo;
-		nuevo->left = comodin->left;
-		comodin->left = nuevo;
+		hijo->left = nullptr;
+		hijo->right = nullptr;
 		nuevo->data = caracteristica;
 		hijo->data = nombre;
+		if (path[0] == 's') {
+			nuevo->right = hijo;
+			nuevo->left = comodin->right;
+			comodin->right = nuevo;		
+		}
+		else {
+			nuevo->left = comodin->left;
+			nuevo->right = hijo;
+			comodin->left = nuevo;
+		}
 		return true;
 	}
 	catch (...) {
@@ -122,7 +131,7 @@ bool Tree::insertaInformacion(std::string nombre, std::string caracteristica){
 
 NodePtr Tree::newAdress(){
 	NodePtr comodin = root;
-	while (!path.size == 1) {
+	while (path.size() != 2) {
 		if (path[0] == 'n') {
 			comodin = comodin->left;
 		}
@@ -135,28 +144,21 @@ NodePtr Tree::newAdress(){
 }
 
 bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
-
 	if (!root) {
 		return false;
 	}
-
 	NodePtr nodoA=nullptr;
 	NodePtr nodoB=nullptr;
 	NodePtr auxA = nullptr;  
 	NodePtr auxB = nullptr;
 	NodePtr auxRoot = nullptr;
-
 	nodoA = searchNodo(changeClass1); // anterior del nodo a cambiar A
 	nodoB = searchNodo(changeClass2);//  anterior del nodo a cambiar B
-
 	if (nodoA != nullptr &&nodoB != nullptr) {  // Si son diferentes de null
-
 		// hay que validar cuando se le ingresa los datos que no sean los mismos
-	
 			// estos son los nodos que realmente se quieren mover
 			auxA = nodoA->left; 
 			auxB = nodoB->left;
-
 			if (changeClass1 == root->data) {  // quiere cambiar la raiz por otra posicion
 				root = auxA;
 				nodoA->left = auxB->left;
@@ -169,7 +171,6 @@ bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 				root = auxA;
 				return true;
 			}
-
 			// Para los demas casos
 			nodoA->left = auxA->left;  // elimina el primer elemento del arbol
 			auxA->left = auxB->left;

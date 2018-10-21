@@ -7,7 +7,7 @@ class Interface {
 public:
 	static int winPrincipal();
 	static void winLose();
-	static void winNewData();
+	static void winNewData(Tree* game);
 	static void winWinner();
 	static void startGame(Tree* game);
 	static void endGame();

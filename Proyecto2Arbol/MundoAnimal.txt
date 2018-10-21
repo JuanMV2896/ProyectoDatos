@@ -1,12 +1,14 @@
 es un Ave
-es un AguilaS
+pioS
+polloSS
+es un AguilaSN
 es un ReptilN
 es un LagartoNS
 es un MamiferoNN
 es AcuaticoNNS
 es una BallenaNNSS
 MaullaNNSN
-es un GatoNNSNS
+es un GatoNNSNSN
 es un PerroNNSNN
 es un PezNNN
 es un Pez BetaNNNS

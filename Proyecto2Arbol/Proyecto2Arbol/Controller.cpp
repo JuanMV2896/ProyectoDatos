@@ -46,11 +46,11 @@ void Controller::control2(){
 	switch (op) {
 		case 1: {
 			Interface::startGame(game);
-			break;
+			return control2();
 		}
 		case 2: {
-			//modificar pisos
-			break;
+			//Interface::winNewData(game);
+			return control2();
 		}
 		case 3: {
 			Interface::endGame();

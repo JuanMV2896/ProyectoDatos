@@ -28,14 +28,14 @@ void Interface::winLose(){
 	std::cout << "*             LAMENTABLEMENTE HAS PERDIDO!           *" << std::endl;
 	std::cout << "*====================================================*" << std::endl;
 	std::cout << "******************************************************" << std::endl << std::endl;
-	std::cout << " Cargando" << std::endl;
+	std::cout << " Cargando";
 	for (int i = 0; i < 4; i++) {
 		std::cout << ".";
 		Sleep(1000);
 	}
 }
 
-void Interface::winNewData(){
+void Interface::winNewData(Tree* game){
 	std::string nombre, caracteristica, opcion;
 	do {
 		system("cls");
@@ -44,10 +44,18 @@ void Interface::winNewData(){
 		std::cout << "====================================================" << std::endl;
 		std::cout << " Nombre del animal: "; std::cin >> nombre;
 		std::cout << " Fuerte caracteristica: "; std::cin >> caracteristica;
+		//std::cin.ignore();
+		//std::getline(std::cin, caracteristica);
 		std::cout << "====================================================" << std::endl;
 		std::cout << "Esta seguro de los datos que ingreso? (si/no) : "; std::cin >> opcion;
 		if (opcion == "si") {
-
+			if (game->insertInformation(nombre, caracteristica)) {
+				std::cout << "Se ha actualizado la basa de datos correctamente." << std::endl;
+				system("pause");
+			}
+			else {
+				std::cerr << "Error inesperado al actualizar datos." << std::endl;
+			}
 		}
 	} while (opcion != "si");
 }
@@ -77,7 +85,7 @@ void Interface::startGame(Tree* game){
 	}
 	else {
 		winWinner();
-		winNewData();
+		winNewData(game);
 	}
 	//validar que no tenga ningun numero...
 }
