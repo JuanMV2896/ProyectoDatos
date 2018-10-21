@@ -41,13 +41,12 @@ NodePtr Tree::insert(NodePtr actual, std::string data) {
 	return actual;
 }
 
-bool Tree::ask(NodePtr actual/*, std::istream & answer*/) {
+bool Tree::ask(NodePtr actual) {
 	std::string temp;
 	std::cout << "Digite (s/n)\n";
 	std::cout << "El animal en el que piensa " << actual->data << "?:\n";
 	std::cin >> temp;
 	path += temp;
-	/*std::getline(answer, temp);*/
 	if (!actual->left && !actual->right && temp == "n")
 		return false;
 	if (!actual->left && temp == "n")
@@ -56,12 +55,10 @@ bool Tree::ask(NodePtr actual/*, std::istream & answer*/) {
 		return true;
 	bool response = false;
 	if (temp == "n") {
-		//system("cls");
-		response = ask(actual->left/*, std::cin*/);
+		response = ask(actual->left);
 	}
 	if (temp == "s") {
-		//system("cls");
-		response = ask(actual->right/*, std::cin*/);
+		response = ask(actual->right);
 	}
 	return response;
 }
@@ -85,16 +82,15 @@ void Tree::save(NodePtr actual, std::ostream& archS){
 
 NodePtr Tree::recover(std::ifstream& file) {
 	std::string data;
-	//std::getline(file, data);
 	NodePtr temp = nullptr;
 	if (!file)
 		return nullptr;
-	while (/*file >> */std::getline(file, data))
+	while (std::getline(file, data))
 		temp = this->insert(temp, data);
 	return temp;
 }
 
-void Tree::toString(NodePtr actual) { //Prueba   -> Recorrido  PreOrden
+void Tree::toString(NodePtr actual) { 
 	if (actual != nullptr) {
 		std::cout << actual->data;
 		std::cout << ", ";
@@ -170,16 +166,15 @@ bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 	return false;
 }
 
-NodePtr Tree::searchNodo(std::string name) {  // Busca y delvuelve el nodo anterior al que se desea cambiar
+NodePtr Tree::searchNodo(std::string name) { 
 	NodePtr aux = root;
-	if (!aux) {  // si esta vacia
+	if (!aux) {  
 		return nullptr;
 	}
-	if (aux->data == name) {  // si el nodo que desea cambiar es la raiz del arbol
+	if (aux->data == name) {  
 		return aux;
 	}
-	while (aux->left!=nullptr)  // Va buscando en los nodos siguientes y cuando lo encuentra devuelve el anterior
-	{
+	while (aux->left!=nullptr){
 		if (aux->left->data == name) {
 			return aux;
 		}
@@ -203,9 +198,7 @@ NodePtr Tree::newAdress() {
 	return comodin;
 }
 
-
 std::string Tree::showMainClasses() {
-
 	NodePtr aux;
 	int cont = 1;
 	aux = root;
