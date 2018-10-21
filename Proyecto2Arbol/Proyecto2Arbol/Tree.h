@@ -24,6 +24,10 @@ public:
 	NodePtr recover(std::ifstream&);
 	void toString(NodePtr);  //PRUEBA    -> Recorrido  PreOrden
 
+	bool changeLevel(std::string,std::string);
+	NodePtr searchNodo(std::string);
+	
+
 private:
 	NodePtr root;
 

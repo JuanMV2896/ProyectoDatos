@@ -110,3 +110,68 @@ void Tree::toString(NodePtr actual) { //Prueba   -> Recorrido  PreOrden
 		toString(actual->right);
 	}
 }
+
+bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
+
+	if (!root) {
+		return false;
+	}
+
+	NodePtr nodoA=nullptr;
+	NodePtr nodoB=nullptr;
+	NodePtr auxA = nullptr;  
+	NodePtr auxB = nullptr;
+	NodePtr auxRoot = nullptr;
+
+	nodoA = searchNodo(changeClass1); // anterior del nodo a cambiar A
+	nodoB = searchNodo(changeClass2);//  anterior del nodo a cambiar B
+
+	if (nodoA != nullptr &&nodoB != nullptr) {  // Si son diferentes de null
+
+		// hay que validar cuando se le ingresa los datos que no sean los mismos
+	
+			// estos son los nodos que realmente se quieren mover
+			auxA = nodoA->left; 
+			auxB = nodoB->left;
+
+			if (changeClass1 == root->data) {  // quiere cambiar la raiz por otra posicion
+				root = auxA;
+				nodoA->left = auxB->left;
+				auxB->left = nodoA;
+				return true;
+			}
+			if (changeClass2== root->data) { // quiere cambiar un nodo por la raiz
+				nodoA->left = auxA->left;// elimino el el A de la posicion en que estaba
+				auxA->left = nodoB;
+				root = auxA;
+				return true;
+			}
+
+			// Para los demas casos
+			nodoA->left = auxA->left;  // elimina el primer elemento del arbol
+			auxA->left = auxB->left;
+			auxB->left = auxA;
+			return true;
+	}
+	return false;
+}
+
+NodePtr Tree::searchNodo(std::string name) {
+	NodePtr aux = root;
+
+
+	if (!aux) {
+		return nullptr;
+	}
+	if (aux->data == name) {  // si el nodo que desea cambiar esta en la raiz del arbol
+		return aux;
+	}
+	while (!aux->left)
+	{
+		if (aux->left->data == name) {
+			return aux;
+		}
+		aux = aux->left;
+	}
+	return nullptr;
+}
