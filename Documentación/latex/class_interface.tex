@@ -1,0 +1,57 @@
+\hypertarget{class_interface}{}\section{Interface Class Reference}
+\label{class_interface}\index{Interface@{Interface}}
+
+
+{\ttfamily \#include $<$Interface.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_interface_ac6edebd0660c76f190eceb9cbecc7e59}\label{class_interface_ac6edebd0660c76f190eceb9cbecc7e59}} 
+static int \mbox{\hyperlink{class_interface_ac6edebd0660c76f190eceb9cbecc7e59}{win\+Principal}} ()
+\begin{DoxyCompactList}\small\item\em Metodo encargado de la visualizacion del menu principal, el cual muestra las opciones principales del juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interface_a001825ca909fb316d5b4d7db65680bea}\label{class_interface_a001825ca909fb316d5b4d7db65680bea}} 
+static void \mbox{\hyperlink{class_interface_a001825ca909fb316d5b4d7db65680bea}{win\+Lose}} ()
+\begin{DoxyCompactList}\small\item\em Metodo encargado de hacerle saber al usuario que a perdido el juego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_interface_acdee7e4ed00d8fa01a8f5f397a7d5f75}{win\+New\+Data}} (\mbox{\hyperlink{class_tree}{Tree}} $\ast$game)
+\item 
+\mbox{\Hypertarget{class_interface_a773e59eb1fe93e5e300b4bcb5ecd2fa4}\label{class_interface_a773e59eb1fe93e5e300b4bcb5ecd2fa4}} 
+static void \mbox{\hyperlink{class_interface_a773e59eb1fe93e5e300b4bcb5ecd2fa4}{win\+Winner}} ()
+\begin{DoxyCompactList}\small\item\em Metodo encargado de hacerle saber al usuario que a gando el juego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_interface_ae5610c5276f6839e66435b28547605c1}{start\+Game}} (\mbox{\hyperlink{class_tree}{Tree}} $\ast$game)
+\item 
+\mbox{\Hypertarget{class_interface_a242efa2cb3244d2955d5ed12e116f9b5}\label{class_interface_a242efa2cb3244d2955d5ed12e116f9b5}} 
+static void \mbox{\hyperlink{class_interface_a242efa2cb3244d2955d5ed12e116f9b5}{end\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que muestra el los creditos y mensajes finales del juego. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_interface_a2f1cc2f4dbf8df5024708e55bb85c995}{change\+Floor}} (\mbox{\hyperlink{class_tree}{Tree}} $\ast$game)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+La clase interfaz es la encargada de todos los procesos de visualizacion del juego, para que haya facil comprension por parte de los usuarios con respecto a las funcionalidades que este programa brinda. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interface_a2f1cc2f4dbf8df5024708e55bb85c995}\label{class_interface_a2f1cc2f4dbf8df5024708e55bb85c995}} 
+\index{Interface@{Interface}!change\+Floor@{change\+Floor}}
+\index{change\+Floor@{change\+Floor}!Interface@{Interface}}
+\subsubsection{\texorpdfstring{change\+Floor()}{changeFloor()}}
+{\footnotesize\ttfamily void Interface\+::change\+Floor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Metodo encargado de mostrar informacion para guiar al usuario a la hora de querer cambiar los niveles.\+Este metodo recibe un parametro del tipo \mbox{\hyperlink{class_tree}{Tree}} para tener acceso a las funciones de las clases pricipales. \mbox{\Hypertarget{class_interface_ae5610c5276f6839e66435b28547605c1}\label{class_interface_ae5610c5276f6839e66435b28547605c1}} 
+\index{Interface@{Interface}!start\+Game@{start\+Game}}
+\index{start\+Game@{start\+Game}!Interface@{Interface}}
+\subsubsection{\texorpdfstring{start\+Game()}{startGame()}}
+{\footnotesize\ttfamily void Interface\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Metodo que muestra el encabezado inicial del juego. Este metodo recibe un parametro del tipo \mbox{\hyperlink{class_tree}{Tree}} para tener acceso a las funciones de las clases pricipales. \mbox{\Hypertarget{class_interface_acdee7e4ed00d8fa01a8f5f397a7d5f75}\label{class_interface_acdee7e4ed00d8fa01a8f5f397a7d5f75}} 
+\index{Interface@{Interface}!win\+New\+Data@{win\+New\+Data}}
+\index{win\+New\+Data@{win\+New\+Data}!Interface@{Interface}}
+\subsubsection{\texorpdfstring{win\+New\+Data()}{winNewData()}}
+{\footnotesize\ttfamily void Interface\+::win\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}} $\ast$}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Metodo encargado de mostrar informacion para guiar al usuario a la hora de crear e ingresar nuevos datos al sistema, este metodo recibe un parametro del tipo \mbox{\hyperlink{class_tree}{Tree}} para tener acceso a las funciones de las clases pricipales. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Biblioteca/\+Documentos/\+Git\+Hub/\+Proyecto\+Datos/\+Proyecto2\+Arbol/\+Proyecto2\+Arbol/Interface.\+h\item 
+D\+:/\+Biblioteca/\+Documentos/\+Git\+Hub/\+Proyecto\+Datos/\+Proyecto2\+Arbol/\+Proyecto2\+Arbol/Interface.\+cpp\end{DoxyCompactItemize}

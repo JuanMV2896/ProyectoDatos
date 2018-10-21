@@ -1,0 +1,89 @@
+\hypertarget{class_tree}{}\section{Tree Class Reference}
+\label{class_tree}\index{Tree@{Tree}}
+
+
+Clase representativa de un arbol de busqueda binaria.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tree_ad376a7c639d857312f5de2ef47482f68}\label{class_tree_ad376a7c639d857312f5de2ef47482f68}} 
+\mbox{\hyperlink{class_tree_ad376a7c639d857312f5de2ef47482f68}{Tree}} ()
+\begin{DoxyCompactList}\small\item\em Constructor del arbol. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_abdc38545cf3f588725b5d8b8075b3866}\label{class_tree_abdc38545cf3f588725b5d8b8075b3866}} 
+\mbox{\hyperlink{class_tree_abdc38545cf3f588725b5d8b8075b3866}{$\sim$\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor del arbol. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_acb3f86cc74123c9a1d05391005c429fe}\label{class_tree_acb3f86cc74123c9a1d05391005c429fe}} 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} \mbox{\hyperlink{class_tree_acb3f86cc74123c9a1d05391005c429fe}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Metodo que devuelve el nodo raiz del arbol binario de busqueda. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a8e92e8007c0ede7b8dcbbebac93ab91e}\label{class_tree_a8e92e8007c0ede7b8dcbbebac93ab91e}} 
+void \mbox{\hyperlink{class_tree_a8e92e8007c0ede7b8dcbbebac93ab91e}{set\+Root}} (\mbox{\hyperlink{struct_node}{Node\+Ptr}})
+\begin{DoxyCompactList}\small\item\em Metodo que recibe por parametro un Nodo, el cual va a ser seteado en el atributo raiz(root). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} \mbox{\hyperlink{class_tree_a235adb17bc66847761bc22dcb9c42b89}{insert}} (\mbox{\hyperlink{struct_node}{Node\+Ptr}}, std\+::string)
+\item 
+\mbox{\Hypertarget{class_tree_aa9a2009a4df8efc3700119d3498abac9}\label{class_tree_aa9a2009a4df8efc3700119d3498abac9}} 
+bool \mbox{\hyperlink{class_tree_aa9a2009a4df8efc3700119d3498abac9}{ask}} (\mbox{\hyperlink{struct_node}{Node\+Ptr}})
+\begin{DoxyCompactList}\small\item\em Método que pregunta al usuario, para proceder a adivinar cual es el animal que hay que desvelar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a77685cdbc66220af7e7abb829db265bd}\label{class_tree_a77685cdbc66220af7e7abb829db265bd}} 
+void \mbox{\hyperlink{class_tree_a77685cdbc66220af7e7abb829db265bd}{save}} (\mbox{\hyperlink{struct_node}{Node\+Ptr}}, std\+::ostream \&)
+\begin{DoxyCompactList}\small\item\em Método que guarda los datos del árbol en un archivo .txt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a59a5cc7d984ada75d4f7acbaff3dfb59}\label{class_tree_a59a5cc7d984ada75d4f7acbaff3dfb59}} 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} \mbox{\hyperlink{class_tree_a59a5cc7d984ada75d4f7acbaff3dfb59}{recover}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Método que recupera los datos de un archivo .txt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a04f25d7e5883e937234376968ca3627d}\label{class_tree_a04f25d7e5883e937234376968ca3627d}} 
+void \mbox{\hyperlink{class_tree_a04f25d7e5883e937234376968ca3627d}{to\+String}} (\mbox{\hyperlink{struct_node}{Node\+Ptr}})
+\begin{DoxyCompactList}\small\item\em Metodo que imprime el arbol en pre-\/orden. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a37ab3d80a33b1fdaa7130ed63617887f}\label{class_tree_a37ab3d80a33b1fdaa7130ed63617887f}} 
+bool \mbox{\hyperlink{class_tree_a37ab3d80a33b1fdaa7130ed63617887f}{change\+Level}} (std\+::string, std\+::string)
+\begin{DoxyCompactList}\small\item\em Metodo encargado de realizar la manipulacion de los punteros para las referencias y lograr la reubicacion de los niveles, que se desean cambiar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} \mbox{\hyperlink{class_tree_aad452ebfd8dd52d25d806b56e06604b3}{search\+Nodo}} (std\+::string)
+\item 
+bool \mbox{\hyperlink{class_tree_aad5a6dc1054d91c768e57bac144b952a}{insert\+Information}} (std\+::string, std\+::string)
+\item 
+\mbox{\Hypertarget{class_tree_a29f2f81d1f6d218c3cf43e2ae519c2b6}\label{class_tree_a29f2f81d1f6d218c3cf43e2ae519c2b6}} 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} \mbox{\hyperlink{class_tree_a29f2f81d1f6d218c3cf43e2ae519c2b6}{new\+Adress}} ()
+\begin{DoxyCompactList}\small\item\em Método que identifica cual ruta el usuario escogio mientras se le realizaba las preguntas, y éste método es un apoyo para \mbox{\hyperlink{class_tree_aad5a6dc1054d91c768e57bac144b952a}{insert\+Information()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_aeef94c8934d3ec99c95e0af1f45b0575}\label{class_tree_aeef94c8934d3ec99c95e0af1f45b0575}} 
+std\+::string \mbox{\hyperlink{class_tree_aeef94c8934d3ec99c95e0af1f45b0575}{show\+Main\+Classes}} ()
+\begin{DoxyCompactList}\small\item\em Metodo encargado de mostrar las clases principales de la base de datos(arbol), las cuales son las categorias de los animales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tree_a3becc86f732a472657899d766f59cb73}\label{class_tree_a3becc86f732a472657899d766f59cb73}} 
+\mbox{\hyperlink{struct_node}{Node\+Ptr}} {\bfseries root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase representativa de un arbol de busqueda binaria. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tree_a235adb17bc66847761bc22dcb9c42b89}\label{class_tree_a235adb17bc66847761bc22dcb9c42b89}} 
+\index{Tree@{Tree}!insert@{insert}}
+\index{insert@{insert}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node\+Ptr}} Tree\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node\+Ptr}}}]{actual,  }\item[{std\+::string}]{data }\end{DoxyParamCaption})}
+
+Método que recibe por parámetro un Nodo y un dato y los inserta en su respectivo lugar dependiendo del archivo del que se recupera \mbox{\Hypertarget{class_tree_aad5a6dc1054d91c768e57bac144b952a}\label{class_tree_aad5a6dc1054d91c768e57bac144b952a}} 
+\index{Tree@{Tree}!insert\+Information@{insert\+Information}}
+\index{insert\+Information@{insert\+Information}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{insert\+Information()}{insertInformation()}}
+{\footnotesize\ttfamily bool Tree\+::insert\+Information (\begin{DoxyParamCaption}\item[{std\+::string}]{nombre,  }\item[{std\+::string}]{caracteristica }\end{DoxyParamCaption})}
+
+Método que ingresa los datos del animal al arbol si la aplicacion pierde al adivinar cual debería ser. También los agrega en su respectivo lugar. \mbox{\Hypertarget{class_tree_aad452ebfd8dd52d25d806b56e06604b3}\label{class_tree_aad452ebfd8dd52d25d806b56e06604b3}} 
+\index{Tree@{Tree}!search\+Nodo@{search\+Nodo}}
+\index{search\+Nodo@{search\+Nodo}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{search\+Nodo()}{searchNodo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node\+Ptr}} Tree\+::search\+Nodo (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Metodo encargado buscar un nodo espesifico y devolver el anterior a ese. Recibe un parametro del tipo std\+::string con el nombre el cual sera necesario para ubicar el nodo deseado. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Biblioteca/\+Documentos/\+Git\+Hub/\+Proyecto\+Datos/\+Proyecto2\+Arbol/\+Proyecto2\+Arbol/Tree.\+h\item 
+D\+:/\+Biblioteca/\+Documentos/\+Git\+Hub/\+Proyecto\+Datos/\+Proyecto2\+Arbol/\+Proyecto2\+Arbol/Tree.\+cpp\end{DoxyCompactItemize}
