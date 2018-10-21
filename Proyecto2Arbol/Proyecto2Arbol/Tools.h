@@ -4,3 +4,4 @@
 
 int validaOpcion(std::string);
 std::string direccion(std::string&);
+void modificaNombre(std::string&);

@@ -43,9 +43,10 @@ void Interface::winNewData(Tree* game){
 		std::cout << "              ACTUALIZANDO LA BASE DE DATOS         " << std::endl;
 		std::cout << "====================================================" << std::endl;
 		std::cout << " Nombre del animal: "; std::cin >> nombre;
-		std::cout << " Fuerte caracteristica: "; std::cin >> caracteristica;
-		//std::cin.ignore();
-		//std::getline(std::cin, caracteristica);
+		modificaNombre(nombre);
+		std::cout << " Fuerte caracteristica: ";/* std::cin >> caracteristica;*/
+		std::cin.ignore();
+		std::getline(std::cin, caracteristica);
 		std::cout << "====================================================" << std::endl;
 		std::cout << "Esta seguro de los datos que ingreso? (si/no) : "; std::cin >> opcion;
 		if (opcion == "si") {

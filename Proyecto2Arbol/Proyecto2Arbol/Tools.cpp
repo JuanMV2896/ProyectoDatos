@@ -24,3 +24,11 @@ std::string direccion(std::string& valor) {
 	}
 	return direccion;
 }
+
+void modificaNombre(std::string& nombre){
+	if (nombre[nombre.size()] != 'a') {
+		nombre = " es un " + nombre;
+	}
+	else
+		nombre = " es una " + nombre;
+}
