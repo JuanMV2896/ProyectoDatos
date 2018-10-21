@@ -11,14 +11,17 @@ public:
 	static int winPrincipal();
 	///Metodo encargado de hacerle saber al usuario que a perdido el juego. 
 	static void winLose();
-	///Metodo encargado de mostrar informacion para guiar al usuario a la hora de crear e ingresar nuevos datos al sistema.
+	///Metodo encargado de mostrar informacion para guiar al usuario a la hora de crear e ingresar nuevos datos al sistema, este metodo recibe
+	///un parametro del tipo Tree para tener acceso a las funciones de las clases pricipales.
 	static void winNewData(Tree* game);
 	///Metodo encargado de hacerle saber al usuario que a gando el juego.
 	static void winWinner();
-	///Metodo que muestra el encabezado inicial del juego.
+	///Metodo que muestra el encabezado inicial del juego. Este metodo recibe
+	///un parametro del tipo Tree para tener acceso a las funciones de las clases pricipales.
 	static void startGame(Tree* game);
 	///Metodo que muestra el los creditos y mensajes finales del juego.
 	static void endGame();
-	///Metodo encargado de mostrar informacion para guiar al usuario a la hora de querer cambiar los niveles.
+	///Metodo encargado de mostrar informacion para guiar al usuario a la hora de querer cambiar los niveles.Este metodo recibe
+	///un parametro del tipo Tree para tener acceso a las funciones de las clases pricipales.
 	static void changeFloor(Tree* game);
 };

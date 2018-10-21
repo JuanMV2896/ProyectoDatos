@@ -25,8 +25,10 @@ public:
 	void save(NodePtr, std::ostream&);
 	NodePtr recover(std::ifstream&);
 	void toString(NodePtr);  //PRUEBA    -> Recorrido  PreOrden
+	/// Metodo encargado de realizar la manipulacion de los punteros para las referencias y lograr la reubicacion de los niveles, que se desean cambiar.
 	bool changeLevel(std::string,std::string);
-	/// Metodo encargado buscar un nodo espesifico y devolver el anterior a ese.
+	/// Metodo encargado buscar un nodo espesifico y devolver el anterior a ese. Recibe un parametro del tipo std::string con el nombre el cual 
+	/// sera necesario para ubicar el nodo deseado.
 	NodePtr searchNodo(std::string);
 	bool insertInformation(std::string, std::string);
 	NodePtr newAdress();
