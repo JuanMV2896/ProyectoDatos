@@ -147,6 +147,8 @@ bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 	if (!root) {
 		return false;
 	}
+	modificaNombre(changeClass1);
+	modificaNombre(changeClass2);
 	NodePtr nodoA=nullptr;
 	NodePtr nodoB=nullptr;
 	NodePtr auxA = nullptr;  
