@@ -26,9 +26,11 @@ public:
 	NodePtr recover(std::ifstream&);
 	void toString(NodePtr);  //PRUEBA    -> Recorrido  PreOrden
 	bool changeLevel(std::string,std::string);
+	/// Metodo encargado buscar un nodo espesifico y devolver el anterior a ese.
 	NodePtr searchNodo(std::string);
 	bool insertInformation(std::string, std::string);
 	NodePtr newAdress();
+	///Metodo encargado de mostrar las clases principales de la base de datos(arbol), las cuales son las categorias de los animales.
 	std::string showMainClasses();
 private:
 	NodePtr root;
