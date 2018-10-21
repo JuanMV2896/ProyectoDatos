@@ -88,7 +88,6 @@ void Interface::startGame(Tree* game){
 		winWinner();
 		winNewData(game);
 	}
-	//validar que no tenga ningun numero...
 }
 
 void Interface::endGame(){

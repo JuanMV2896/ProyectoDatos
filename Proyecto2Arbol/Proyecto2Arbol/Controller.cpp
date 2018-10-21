@@ -7,15 +7,6 @@ Controller::Controller(){
 	try {
 		handle.open("../MundoAnimal.txt", std::ios::in);
 		game->setRoot(game->recover(handle));
-
-		/*game->toString(game->getRoot());
-		std::cout << "\n";
-
-		game->changeLevel("es un Ave", "es un Anfibio"); 
-		std::cout << "\n";
-		game->toString(game->getRoot());
-		std::cout << "\n";
-		system("pause");*/
 		handle.close();
 		control2();
 	}
