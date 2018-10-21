@@ -104,3 +104,32 @@ void Interface::endGame(){
 	Sleep(1000);
 	std::cout << "====================================================" << std::endl;
 }
+
+
+void Interface::changeFloor(Tree* game) {
+
+	std::string nombre, caracteristica, opcion;
+	do {
+		system("cls");
+		std::cout << "====================================================" << std::endl;
+		std::cout << "      REUBICANDO CLASE ESPECIAL          " << std::endl;
+		std::cout << "====================================================" << std::endl;
+		std::cout << " Nombre del animal: "; std::cin >> nombre;
+		std::cout << " Fuerte caracteristica: "; std::cin >> caracteristica;
+		//std::cin.ignore();
+		//std::getline(std::cin, caracteristica);
+		std::cout << "====================================================" << std::endl;
+		std::cout << "Esta seguro de los datos que ingreso? (si/no) : "; std::cin >> opcion;
+		if (opcion == "si") {
+			if (game->insertInformation(nombre, caracteristica)) {
+				std::cout << "Se ha actualizado la basa de datos correctamente." << std::endl;
+				system("pause");
+			}
+			else {
+				std::cerr << "Error inesperado al actualizar datos." << std::endl;
+			}
+		}
+	} while (opcion != "si");
+
+
+}

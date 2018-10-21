@@ -11,5 +11,5 @@ public:
 	static void winWinner();
 	static void startGame(Tree* game);
 	static void endGame();
-	static void changeFloor();
+	static void changeFloor(Tree* game);
 };
