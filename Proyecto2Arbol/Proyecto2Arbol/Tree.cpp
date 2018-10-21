@@ -129,19 +129,7 @@ bool Tree::insertInformation(std::string nombre, std::string caracteristica){
 	}
 }
 
-NodePtr Tree::newAdress(){
-	NodePtr comodin = root;
-	while (path.size() != 2) {
-		if (path[0] == 'n') {
-			comodin = comodin->left;
-		}
-		else {
-			comodin = comodin->right;
-		}
-		path.erase(0, 1);
-	}
-	return comodin;
-}
+
 
 bool Tree::changeLevel(std::string changeClass1,std::string changeClass2) {
 	if (!root) {
@@ -198,4 +186,34 @@ NodePtr Tree::searchNodo(std::string name) {  // Busca y delvuelve el nodo anter
 		aux = aux->left;
 	}
 	return nullptr;
+}
+
+
+NodePtr Tree::newAdress() {
+	NodePtr comodin = root;
+	while (path.size() != 2) {
+		if (path[0] == 'n') {
+			comodin = comodin->left;
+		}
+		else {
+			comodin = comodin->right;
+		}
+		path.erase(0, 1);
+	}
+	return comodin;
+}
+
+
+std::string Tree::showMainClasses() {
+
+	NodePtr aux;
+	int cont = 1;
+	aux = root;
+	std::stringstream s;
+	while (aux->left!=nullptr)
+	{
+		s << aux->data<<" nivel "<<cont++<<"\n";
+		aux = aux->left;
+	}
+	return s.str();
 }

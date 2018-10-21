@@ -109,20 +109,20 @@ void Interface::endGame(){
 
 void Interface::changeFloor(Tree* game) {
 
-	std::string nombre, caracteristica, opcion;
+	std::string nombreA, nombreB, opcion;
 	do {
 		system("cls");
 		std::cout << "====================================================" << std::endl;
-		std::cout << "      REUBICANDO CLASE ESPECIAL          " << std::endl;
+		std::cout << "            REUBICANDO CLASE ESPECIAL          " << std::endl;
 		std::cout << "====================================================" << std::endl;
-		std::cout << " Nombre del animal: "; std::cin >> nombre;
-		std::cout << " Fuerte caracteristica: "; std::cin >> caracteristica;
-		//std::cin.ignore();
-		//std::getline(std::cin, caracteristica);
+		std::cout<< game->showMainClasses()<< std::endl;
+		std::cout << " Digite el nombre de la clase que desea reubicar: "; std::cin >> nombreA;
+		std::cout << " Digite el nombre de la clase DONDE desea reubicarla: "; std::cin >> nombreB;
 		std::cout << "====================================================" << std::endl;
 		std::cout << "Esta seguro de los datos que ingreso? (si/no) : "; std::cin >> opcion;
 		if (opcion == "si") {
-			if (game->insertInformation(nombre, caracteristica)) {
+			if (game->changeLevel(nombreA,nombreB)) {
+				std::cout << game->showMainClasses() << std::endl;
 				std::cout << "Se ha actualizado la basa de datos correctamente." << std::endl;
 				system("pause");
 			}

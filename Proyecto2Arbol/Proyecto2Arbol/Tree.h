@@ -29,6 +29,7 @@ public:
 	NodePtr searchNodo(std::string);
 	bool insertInformation(std::string, std::string);
 	NodePtr newAdress();
+	std::string showMainClasses();
 private:
 	NodePtr root;
 };

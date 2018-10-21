@@ -49,7 +49,7 @@ void Controller::control2(){
 			return control2();
 		}
 		case 2: {
-			//Interface::winNewData(game);
+			Interface::changeFloor(game);
 			return control2();
 		}
 		case 3: {
