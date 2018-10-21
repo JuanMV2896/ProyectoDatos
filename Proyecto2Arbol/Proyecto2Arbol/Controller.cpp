@@ -7,10 +7,12 @@ Controller::Controller(){
 		handle.open("../MundoAnimal.txt", std::ios::in);
 		game->setRoot(game->recover(handle));
 		handle.close();
+		control2();
 	}
 	catch (...) {
 		handle.close();
 	}
+
 }
 
 Controller::~Controller(){

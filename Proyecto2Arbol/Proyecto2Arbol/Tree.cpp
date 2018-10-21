@@ -105,7 +105,7 @@ NodePtr Tree::recover(std::ifstream& file) {
 void Tree::toString(NodePtr actual) { //Prueba   -> Recorrido  PreOrden
 	if (actual != nullptr) {
 		std::cout << actual->data;
-		std::cout << " ";
+		std::cout << ", ";
 		toString(actual->left);
 		toString(actual->right);
 	}
